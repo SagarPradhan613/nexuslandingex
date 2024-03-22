@@ -740,3 +740,21 @@ body {
     padding-bottom: 6rem !important;
   }
 }
+
+[data-testid="otp-input-root"] {
+  display: flex !important;
+  width: 100% !important;
+}
+
+[data-testid="input"] {
+  flex-grow: 1 !important;
+  height: 65px !important; 
+  margin-right: 0.6rem !important;
+  background-color: #D8EAFF !important;
+  border: 1px solid #00000036 !important;
+  border-radius: 13px !important;
+}
+
+[data-testid="input"]:last-child {
+  margin-right: 0 !important; /* Remove margin from the last input to avoid extra space */
+}

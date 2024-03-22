@@ -1,6 +1,3 @@
-
-
-
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
@@ -13,6 +10,8 @@ import { FaArrowRight } from "react-icons/fa6";
 import styled from "styled-components";
 import { FaArrowLeft } from "react-icons/fa6";
 import IconButton from "@/components/IconButton";
+import OTPInput from "otp-input-react";
+
 
 const Container = styled.div`
   position: absolute;
@@ -79,7 +78,9 @@ export default function BasicModal({
                 Enter Invite Code
               </Text>
             </Flex>
-            <MuiOtpInput value={otp} onChange={handleChange} length={5} />
+            {/* <MuiOtpInput value={otp} onChange={handleChange} length={5} /> */}
+            <OTPInput value={otp} onChange={handleChange} OTPLength={5} otpType="number" />
+
             <Flex mt={"3rem"} width={"100%"}>
               <RegisterButton
                 bg={COLORS.blue}
