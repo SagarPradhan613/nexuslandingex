@@ -22,6 +22,11 @@ import Heading from "../components/Heading";
 import InviteModal from './InviteModal'
 import styled from "styled-components";
 
+let OTPInputReact;
+if (typeof window !== 'undefined') {
+  OTPInputReact = require('otp-input-react');
+}
+
 const style = {
   position: 'absolute',
   top: '50%',
